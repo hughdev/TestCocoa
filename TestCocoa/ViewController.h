@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void(^myBlock)(void);
 @interface ViewController : UIViewController
-
+@property (nonatomic, copy) myBlock myOBlock;
 
 @end
 

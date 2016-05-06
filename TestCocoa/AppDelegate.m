@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <ALBBSDK/ALBBSDK.h>
 
 @interface AppDelegate ()
 
@@ -17,6 +18,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[ALBBSDK sharedInstance] asyncInit:^{
+        
+    } failure:^(NSError *error) {
+        
+    }];
     return YES;
 }
 
